@@ -19,7 +19,7 @@ jobs:
       uses: actions/setup-node@v1
       with:
         node-version: ${{ matrix.node-version }}
-    - run: npm ci
-    - run: npm run local-build-all --if-present
+    - run: echo Running ci in root and frontend
+    - run: npm run install
       env:
         CI: true
