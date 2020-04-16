@@ -19,7 +19,7 @@ jobs:
       uses: actions/setup-node@v1
       with:
         node-version: ${{ matrix.node-version }}
-    - run: npm run ci
+    - run: npm ci
     - run: cd frontend && npm run ci && cd ..
       env:
         CI: true
