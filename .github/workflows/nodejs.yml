@@ -19,7 +19,7 @@ jobs:
       uses: actions/setup-node@v1
       with:
         node-version: ${{ matrix.node-version }}
-    - run: echo Running ci in root and frontend
-    - run: npm run install
+    - run: npm run ci
+    - run: cd frontend && npm run ci && cd ..
       env:
         CI: true
